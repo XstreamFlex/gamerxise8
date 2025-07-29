@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GamerXise</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #0070d1;
+      --accent: #107c10;
+    }
+    .hero {
+      background-color: var(--primary);
+      color: white;
+    }
+    .hero button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">GamerXise</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>GamerXise</h1>
+    <p>GamerXise is a gamer fitness company</p>
+    <button>Join Now</button>
+  </section>
+  <section class="features">
+    <div class="feature">
+      <i class="fa fa-gamepad" style="color: var(--accent)"></i>
+      <h3>Feature 1</h3>
+      <p>Description of feature 1</p>
+    </div>
+    <div class="feature">
+      <i class="fa fa-dumbbell" style="color: var(--accent)"></i>
+      <h3>Feature 2</h3>
+      <p>Description of feature 2</p>
+    </div>
+    <div class="feature">
+      <i class="fa fa-trophy" style="color: var(--accent)"></i>
+      <h3>Feature 3</h3>
+      <p>Description of feature 3</p>
+    </div>
+  </section>
+  <section class="pricing">
+    <div class="tier">
+      <h3>Tier 1</h3>
+      <p>$10/month</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+      </ul>
+      <button>Sign Up</button>
+    </div>
+    <div class="tier">
+      <h3>Tier 2</h3>
+      <p>$20/month</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+      </ul>
+      <button>Sign Up</button>
+    </div>
+    <div class="tier">
+      <h3>Tier 3</h3>
+      <p>$30/month</p>
+      <ul>
+        <li>Feature 1</li>
+        <li>Feature 2</li>
+        <li>Feature 3</li>
+        <li>Feature 4</li>
+      </ul>
+      <button>Sign Up</button>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div class="testimonial">
+      <img src="https://picsum.photos/80/80" alt="avatar">
+      <p>"Great service!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://picsum.photos/80/80" alt="avatar">
+      <p>"Love it!"</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://picsum.photos/80/80" alt="avatar">
+      <p>"Best in the market!"</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 GamerXise</p>
+    <div class="social-icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
