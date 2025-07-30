@@ -1,125 +1,271 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GamerXise</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    :root {
-      --primary: #0070d1;
-      --accent: #107c10;
-    }
-    .hero {
-      background-color: var(--primary);
-      color: white;
-    }
-    .hero button {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-    .hero button:hover {
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerXise8</title>
+    <style>
+        :root {
+            --primary-color: #003399;
+            --secondary-color: #ffffff;
+            --text-color: #333333;
+            --cta-color: #007bff;
+            --cta-hover-color: #0056b3;
+            --font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--secondary-color);
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin: 10px 0 30px;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--cta-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: var(--cta-hover-color);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .feature-card {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .pricing {
+            padding: 20px;
+            background-color: var(--secondary-color);
+        }
+
+        .pricing h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .pricing-card {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--text-color);
+            border-radius: 10px;
+        }
+
+        .pricing-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .pricing-card p {
+            margin: 0 0 20px;
+        }
+
+        .testimonials {
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .testimonial {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .testimonial p {
+            margin: 0;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+
+            .feature-card, .pricing-card {
+                width: 100%;
+            }
+
+            .testimonial {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial img {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">GamerXise</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <div class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </nav>
-  </header>
-  <section class="hero">
-    <h1>GamerXise</h1>
-    <p>GamerXise is a gamer fitness company</p>
-    <button>Join Now</button>
-  </section>
-  <section class="features">
-    <div class="feature">
-      <i class="fa fa-gamepad" style="color: var(--accent)"></i>
-      <h3>Feature 1</h3>
-      <p>Description of feature 1</p>
-    </div>
-    <div class="feature">
-      <i class="fa fa-dumbbell" style="color: var(--accent)"></i>
-      <h3>Feature 2</h3>
-      <p>Description of feature 2</p>
-    </div>
-    <div class="feature">
-      <i class="fa fa-trophy" style="color: var(--accent)"></i>
-      <h3>Feature 3</h3>
-      <p>Description of feature 3</p>
-    </div>
-  </section>
-  <section class="pricing">
-    <div class="tier">
-      <h3>Tier 1</h3>
-      <p>$10/month</p>
-      <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-      </ul>
-      <button>Sign Up</button>
-    </div>
-    <div class="tier">
-      <h3>Tier 2</h3>
-      <p>$20/month</p>
-      <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
-      </ul>
-      <button>Sign Up</button>
-    </div>
-    <div class="tier">
-      <h3>Tier 3</h3>
-      <p>$30/month</p>
-      <ul>
-        <li>Feature 1</li>
-        <li>Feature 2</li>
-        <li>Feature 3</li>
-        <li>Feature 4</li>
-      </ul>
-      <button>Sign Up</button>
-    </div>
-  </section>
-  <section class="testimonials">
-    <div class="testimonial">
-      <img src="https://picsum.photos/80/80" alt="avatar">
-      <p>"Great service!"</p>
-    </div>
-    <div class="testimonial">
-      <img src="https://picsum.photos/80/80" alt="avatar">
-      <p>"Love it!"</p>
-    </div>
-    <div class="testimonial">
-      <img src="https://picsum.photos/80/80" alt="avatar">
-      <p>"Best in the market!"</p>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2023 GamerXise</p>
-    <div class="social-icons">
-      <i class="fa fa-facebook"></i>
-      <i class="fa fa-twitter"></i>
-      <i class="fa fa-instagram"></i>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    <header>
+        <nav>
+            <div class="logo">GamerXise8</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <h1>GamerXise</h1>
+        <h2>Gamer Fitness Company</h2>
+        <a href="#features" class="cta">Learn More</a>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <i class="fas fa-gamepad"></i>
+            <h3>Interactive Games</h3>
+            <p>Engage in fun and interactive games designed to keep you fit.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>Fitness Programs</h3>
+            <p>Customized fitness programs tailored to your needs.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-trophy"></i>
+            <h3>Competitions</h3>
+            <p>Join competitions and challenges to stay motivated.</p>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-table">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p>Access to basic fitness programs and games.</p>
+                <p>$9.99/month</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p>Full access to all programs, games, and competitions.</p>
+                <p>$19.99/month</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Ultimate</h3>
+                <p>Exclusive access to premium content and personalized coaching.</p>
+                <p>$29.99/month</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="testimonial">
+            <img src="https://picsum.photos/80/80" alt="Avatar">
+            <p>"GamerXise has helped me stay fit while having fun!"</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://picsum.photos/80/80" alt="Avatar">
+            <p>"The competitions are a great way to stay motivated."</p>
+        </div>
+        <div class="testimonial">
+            <img src="https://picsum.photos/80/80" alt="Avatar">
+            <p>"I love the interactive games and fitness programs."</p>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <p>&copy; 2023 GamerXise8. All rights reserved.</p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+    <script>
+        document.querySelector('.burger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+        });
+    </script>
 </body>
 </html>
+```
